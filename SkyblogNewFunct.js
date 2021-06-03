@@ -13,7 +13,7 @@
 // @connect skyrock.com
 // @connect     *
 // @connect     self
-// @run-at       document-body
+// @run-at      document-end
 // @grant       GM_listValues
 // @grant       GM_setValue
 // @grant       GM_getValue
@@ -90,5 +90,6 @@
     for (let i = 0; i < buttons.length; i++) {
         buttons_map += '<li><a href="#" class="edit_' + buttons[i].type + '" onclick="(TAinsert(' + buttons[i].avant + ');return false;"title="' + buttons[i].title + '"><img src="' + buttons[i].image + '" alt="' + buttons[i].image + '"></a></li>';
     }
-    document.getElementById("toolbar").innerHTML += buttons_map;
+    document.getElementById("toolbar").after().innerHTML += buttons_map;
+    console.log(document.getElementById("toolbar").innerHTML);
 })
