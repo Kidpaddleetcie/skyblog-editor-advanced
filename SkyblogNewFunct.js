@@ -13,7 +13,7 @@
 // @connect skyrock.com
 // @connect     *
 // @connect     self
-// @run-at       document-start
+// @run-at       document-body
 // @grant       GM_listValues
 // @grant       GM_setValue
 // @grant       GM_getValue
@@ -86,14 +86,9 @@
 
 
 
-    let tspliteuh = document.URL.split('/');
-    let localisation = document.querySelector("#toolbar .txtbuttons");
+    let buttons_map = " ";
     for (let i = 0; i < buttons.length; i++) {
         buttons_map += '<li><a href="#" class="edit_' + buttons[i].type + '" onclick="(TAinsert(' + buttons[i].avant + ');return false;"title="' + buttons[i].title + '"><img src="' + buttons[i].image + '" alt="' + buttons[i].image + '"></a></li>';
     }
-    localisation.innerHTML += buttons_map;
-
-
-    console.log("test: " + tspliteuh[2]); // Le nom du site web
-    document.getElementById("").innerText = "Saucisse;"
-})();
+    document.getElementById("toolbar").innerHTML += buttons_map;
+})
