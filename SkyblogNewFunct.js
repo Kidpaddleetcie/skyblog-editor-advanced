@@ -6,6 +6,8 @@
 // @homepageURL https://github.com/Kidpaddleetcie/skyblog-editor-advanced
 // @author       Glin Kidpaddleetcie
 // @match        http://*/*
+// @include     http://*
+// @include     https://*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // @connect skyrock.com
